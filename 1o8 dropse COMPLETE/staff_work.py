@@ -143,7 +143,7 @@ def staff_work(un):
     
     df_rows = tomorrow_data.to_numpy().tolist() # turns the dataframe into a list of lists
     for row in df_rows:
-        treev_tomorrow.insert("", 0, values=row)##0 since adding at the end
+        treev_tomorrow.insert("", 0, values=row)#index= 0 since beginning ,end for adding at the end
     #updating the today frame
     treev_today["column"] = list(today_data.columns)
     treev_today["show"] = "headings"
@@ -152,7 +152,7 @@ def staff_work(un):
     
     df_rows = today_data.to_numpy().tolist() # turns the dataframe into a list of lists
     for row in df_rows:
-        treev_today.insert("", 0, values=row)#0 since adding at the end
+        treev_today.insert("", 0, values=row)#index= 0 since beginning ,end for adding at the end
      #updating the late frame
     def strip(str_data):
       list=str_data.split("/")
@@ -169,7 +169,7 @@ def staff_work(un):
     
     df_rows = workdata_late.to_numpy().tolist() # turns the dataframe into a list of lists
     for row in df_rows:
-        treev_late.insert("", 0, values=row)#0 since adding at the end
+        treev_late.insert("", 0, values=row)#index= 0 since beginning ,end for adding at the end
   
     total_projects_label_pending.configure(text=f"{len(data_)}")
     total_projects_label_tomorrow.configure(text=f"{len(tomorrow_data)}")

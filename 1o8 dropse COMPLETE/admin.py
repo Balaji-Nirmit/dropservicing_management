@@ -109,7 +109,7 @@ def admin():
     
     df_rows = data_.to_numpy().tolist() # turns the dataframe into a list of lists
     for row in df_rows:
-        treev_total_data.insert("", 0, values=row)#0 since adding at the end
+        treev_total_data.insert("", 0, values=row)#index= 0 since beginning ,end for adding at the end
   
   # work details
   def work_detail():
@@ -129,7 +129,7 @@ def admin():
     
     df_rows = workdata_pending.to_numpy().tolist() # turns the dataframe into a list of lists
     for row in df_rows:
-        pending_data.insert("", 0, values=row)#0 since adding at the end
+        pending_data.insert("", 0, values=row)#index= 0 since beginning ,end for adding at the end
     
     # done
     
@@ -141,7 +141,7 @@ def admin():
     
     df_rows = workdata_done.to_numpy().tolist() # turns the dataframe into a list of lists
     for row in df_rows:
-        done_data.insert("", 0, values=row)#0 since adding at the end
+        done_data.insert("", 0, values=row)#index= 0 since beginning ,end for adding at the end
   
     # late_data
     def strip(str_data):
@@ -160,7 +160,7 @@ def admin():
     
     df_rows = workdata_late.to_numpy().tolist() # turns the dataframe into a list of lists
     for row in df_rows:
-        late_data.insert("", 0, values=row)#0 since adding at the end
+        late_data.insert("", 0, values=row)#index= 0 since beginning ,end for adding at the end
     
     
     # updating total label
